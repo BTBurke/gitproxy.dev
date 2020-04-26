@@ -1,0 +1,142 @@
+<head>
+<link href="/stylesheets/screen.css" media="screen, projection"  rel="stylesheet" type="text/css" />
+<link href="/dist/styles.css" media="screen, projection" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<input style="display: none;" type="checkbox" id="switch" checked>
+<label style="display: none;" for="switch" class="switch-label">Turn </label>
+<div class="container mx-auto mt-6">
+  <div class="flex items-center mb-4 crt">
+    <div class="screen">
+      
+      <!-- navigation -->
+      <div class="nav-fade">
+      <nav class="flex items-stretch flex-wrap">
+        <div class="flex items-center flex-shrink-0  flex-1 text-crtgreen mr-10">
+          <span class="font-semibold lg:text-2xl sm:text-4xl tracking-tight">gitproxy</span>
+        </div>
+        <div class="block lg:hidden">
+          <button id="menubtn" class="flex items-center px-3 py-2 border rounded text-crtgreen">
+            Menu
+          </button>
+        </div>
+        <div id="menu" class="hidden w-full block lg:justify-end lg:flex lg:items-center lg:w-auto lg:text-crtgreen lg:bg-black lg:mr-64">
+          <div class="text-sm lg:flex-grow">
+            <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-crtgreen mr-4 lg:text-xl sm:text-2xl hover:bg-crtgreen hover:text-black">
+              Docs
+            </a>
+            <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-crtgreen lg:text-xl sm:text-2xl hover:bg-crtgreen hover:text-black">
+              Pricing
+            </a>
+          </div>
+        </div>
+      </nav>
+      </div>
+      <!-- end navigation -->
+
+
+      <div class="hide-text inline-block">
+        <div id="parent">
+          <span class="pr-4">&gt cat service.txt</span> 
+          <div id="border"></div>
+        </div>
+      </div>
+      <div class="overlay">AV-1</div>
+      <div class="lister lg:text-xl xs:text-2xl break-normal whitespace-normal">
+        <p class="font-bold mb-4 text-crtgreen">Keep coding, testing, building, and shipping, even if Github goes down.</p>  
+        <p class="mb-16">Gitproxy continuously mirrors your code and dependencies and transparently 
+        takes over if your git hosting provider is unavailable.</p>
+
+      
+        <div class="object-center">
+        <p class="font-bold text-white mb-8 text-center">Works with these fine (yet fallible) providers</p>
+        </div>
+        <div class="flex flex-row flex-wrap justify-center align-center mb-16">
+          <div class="mr-4 ml-4">
+            <img src="/github.svg" class="h-10" />
+          </div>
+          <div class="mr-4 ml-4">
+            <img src="/gitlab.svg" class="h-10" />
+          </div>
+          <div class="mr-4 ml-4 self-center">
+            <img src="/bitbucket.svg" class="w-24" />
+          </div>
+          <div class="mr-4 ml-4 self-center">
+            <img src="/sourcehut.svg" class="w-24" />
+          </div>
+          <div class="mr-4 ml-4">
+            <img src="/codeberg.svg" class="h-10" />
+          </div>
+         <!-- logos here -->
+        </div>
+
+
+        <p class="mt-16">Gitproxy works by proxying all of your git commands to your normal git host (when everything is going well.)  <span class="font-bold">If their service is down, gitproxy steps in transparently
+          to serve those repositories from our mirrors.</span></p>  
+        <p class="mt-4">It's like a git backup solution on steroids, <span class="font-bold">allowing you to keep working, building, testing, and deploying your service even when
+          you can't push or pull from Github or Gitlab.</span>  When they come back up, gitproxy steps out of the way automatically once your normal git host is ready to work.</p>
+      
+
+
+        <p class="mb-8 mt-16"><span class="font-bold text-crtgreen">Ridiculously over-engineered</span> to make sure you can still work when everything else is broken.</p>
+        <div class="flex flex-wrap mb-16">
+          <div class="w-full md:w-1/2 mb-4 md:text-lg sm:text-xl">
+            <p class="font-semibold mb-2 mr-4">3 cloud providers</p>
+            <p class="md:text-md sm:text-lg mr-4">Servers on three different cloud providers work in concert to provide the service.  Even if AWS and GCP both go down at the same time, gitproxy will remain up.</p>
+          </div>
+          <div class="w-full md:w-1/2 mb-4 md:text-lg sm:text-xl">
+            <p class="font-semibold mb-2 mr-4">6 availability zones with geo-replication</p>
+            <p class="md:text-md sm:text-lg mr-4">Every snapshot of your git repos and dependencies is replicated to six independent data centers on two sides of the continent.</p>
+          </div>
+          <div class="w-full md:w-1/2 mb-4 md:text-lg sm:text-xl">
+            <p class="font-semibold mb-2 mr-4">Serverless autoscaling with auto-failover</p>
+            <p class="md:text-md sm:text-lg mr-4">Autoscaling and failover ensures that even during high traffic spikes due to flaky infrastructure, your requests will get through.</p>
+          </div>
+          <div class="w-full md:w-1/2 mb-4 md:text-lg sm:text-xl">
+            <p class="font-semibold mb-2 mr-4">Continuously mirrors not only your code, but all your dependencies too</p>
+            <p class="md:text-md sm:text-lg mr-4">Every push is continuously mirrored on our infrastructure. We figure out what dependencies you need to build and back those up too.</p>
+          </div>
+        </div>
+        <img src="presence-850.png" class="sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto"/>
+
+        <p class="mt-16 mb-8 text-crtgreen font-bold">And it only costs about $4 per month for your whole team</p>
+        <p class="mb-4">Gitproxy is like car insurance.  99% of the time, we aren't doing anything except mirroring your repos and dependencies, keeping our costs low.</p>  
+        <p class="">When your repo host goes down, we incur a short-term spike in bandwidth costs to serve that data, but over the long term, <span class="font-bold">we can afford to provide the service at a fraction of what it might cost Github to achieve
+          the same reliability.</span></p>
+
+        <p class="mt-16 mb-16"><span class="font-bold text-crtgreen">We do just one thing</span> - store your bits in as many places as necessary and with as many service points as possible so you can get them when you need them. <span class="font-bold">100% money-back guaranteed.</span></p>
+
+        <p>Check out <a class="text-crtgreen hover:text-black hover:bg-crtgreen" href="">pricing</a></p>
+        <p>Read the <a class="text-crtgreen hover:text-black hover:bg-crtgreen" href="">docs</a></p>
+        <p>Send an email <a class="text-crtgreen hover:text-black hover:bg-crtgreen" href="">to tell us what you think</a></p>
+
+
+        <div class="flex flex-row flex-wrap mt-16 mb-8 items-start justify-start flex-initial text-white leading-tight">
+        <div class="mb-4">
+          <ul class="list-none md:mr-24 text-base">
+            <li>Gitproxy</li>
+            <li>Washington, DC</li>
+            <li><a href="mailto:hello@gitproxy.dev">hello@gitproxy.dev</a></li>
+          </ul>
+        </div>
+        <div class="mb-4">
+          <ul class="list-none mr-4 text-base">
+            <li><a href="">Github</a></li>
+            <li><a href="">Pricing</a></li>
+            <li><a href="">Docs</a></li>
+            <li><a href="">Privacy</a></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+let menubtn = document.getElementById('menubtn');
+let menu = document.getElementById('menu');
+menubtn.addEventListener('click', function(){
+  menu.classList.toggle('hidden');
+});
+</script>
+</body>
